@@ -1,0 +1,26 @@
+DROP DATABASE IF EXISTS wda_crud;
+
+CREATE DATABASE wda_crud;
+
+CREATE TABLE wda_crud.customers (
+    id int(11) NOT NULL,
+    name varchar(255) NOT NULL,
+    cpf_cnpj varchar(14) NOT NULL,
+    birthdate date NOT NULL,
+    address varchar(255) NOT NULL,
+    hood varchar(100) NOT NULL,
+    zip_code int(8) NOT NULL,
+    city varchar(100) NOT NULL,
+    state varchar(100) NOT NULL,
+    phone int(13) NOT NULL,
+    mobile int(13) NOT NULL,
+    ie int(11) NOT NULL,
+    created datetime NOT NULL,
+    modified datetime NOT NULL
+);
+
+ALTER TABLE wda_crud.customers
+ADD PRIMARY KEY (id);
+
+ALTER TABLE wda_crud.customers
+MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
